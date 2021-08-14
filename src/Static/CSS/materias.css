@@ -1,0 +1,39 @@
+@import 'LAYOUT/layout.css';
+
+main{
+    width:100vw;
+    height:100vh;
+    background-image:linear-gradient(to right,var(--color-description), var(--color-tabla-days));
+}
+section{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+    width:100%;
+    height:100%;
+}
+section>h2{
+    text-align: center;
+}
+section>h2>a{
+    color:#fff;
+    text-decoration:none;
+}
+section>article{
+    display:flex;
+    flex-wrap: wrap;
+    background: var(--fondo-horarios);
+    width:80%;
+    min-height:12em;
+    justify-content:space-around;
+    align-items: center;
+}
+section>article>h3{
+    width:100%;
+    text-align: center;
+
+}
+section>article>ul{
+    list-style-type:none;
+}

@@ -1,0 +1,50 @@
+@import 'LAYOUT/layout.css';
+
+main{
+    width:100vw;
+    height:100vh;
+    background:var(--fondo-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--fondo-horarios);
+    width:50em;
+    height:20em;
+    border-radius:10px;
+}
+section>form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+}
+section>form>p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section>form>p>label{
+    margin-right:25px;
+}
+section>form>p>textarea{
+    resize:none;
+    height:2em;
+    width:20em;
+}
+section>form>input{
+    margin-top:6em;
+    border-radius:15px;
+    background:var(--color-btn);
+    font-weight:bold;
+    padding:10px 25px;
+    cursor:pointer;
+}
+section>form>input:hover{
+    background:var(--color-btn-hover);
+}

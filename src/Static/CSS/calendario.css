@@ -1,0 +1,55 @@
+@import 'LAYOUT/layout.css';
+
+section{
+    width:auto;
+    height:auto;
+    background:var(--fondo-color);
+}
+section>article{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:95vw ;
+    min-height:100vh;
+}
+section>article>ul{
+    display:flex;
+    flex-direction:column;
+    width:15%;
+    list-style:none;
+    align-items: center;
+    justify-content: center;
+    height:auto;
+}
+
+section>article>ul>li{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction:column;
+    background:var(--fondo-horarios);
+    width:12em;
+    height:10em;
+    margin:2px 0;
+}
+
+section>article>ul>li>a{
+    text-decoration:none;
+    background:var(--color-btn);
+    font-weight:bold;
+    border-radius:15px;
+    padding:7px 15px;
+}
+section>article>ul>li>a:hover{
+    background:var(--color-btn-hover);
+}
+.tabla-days{
+    background:var(--color-tabla-days);
+}
+.tabla-days>h2>a{
+    text-decoration:none;
+}
+.tabla-description{
+    color:var(--color-description);
+    font-weight:bold;
+}
