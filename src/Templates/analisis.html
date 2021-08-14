@@ -1,0 +1,64 @@
+{% extends 'LAYOUT/layout.html' %}
+{% load static %}
+
+{% block link %}
+    <link href="{% static 'CSS/materias.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+
+{% block content %}
+<section>
+    <h2><a href="{% url 'Calendario:home' %}">ANÁLISIS</a></h2>
+    <article>
+        <h3>CURSADA</h3>
+        <ul>
+            <li><h3>LUNES</h3></li>
+            {% for hour in LUNES %}
+                <li>{{hour.hour}}</li>
+            {% endfor %}
+        </ul>
+        <ul>
+            <li><h3>JUEVES</h3></li>
+            {% for hour in JUEVES%}
+                <li>{{hour.hour}}</li>
+            {% endfor %}
+        </ul>
+    </article>
+    <article>
+        <h3>HORAS DE ESTUDIO</h3>
+        <ul>
+            <li>LUNES</li>
+            {% for estudio in ANALISIS %}
+                {% if estudio.dia == 'LUNES' %}   
+                    <li>{{estudio.hour}}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+        
+        <ul>
+            <li>JUEVES</li>
+            {% for estudio in ANALISIS %}
+                {% if estudio.dia == 'JUEVES' %}   
+                    <li>{{estudio.hour}}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+        <ul>
+            <li>SABADO</li>
+            {% for estudio in ANALISIS %}
+                {% if estudio.dia == 'SABADO' %}   
+                    <li>{{estudio.hour}}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+        <ul>
+            <li>DOMINGO</li>
+            {% for estudio in ANALISIS %}
+                {% if estudio.dia == 'DOMINGO' %}   
+                    <li>{{estudio.hour}}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </article>
+</section>
+{% endblock %}

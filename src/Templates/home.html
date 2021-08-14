@@ -1,0 +1,19 @@
+{% extends 'LAYOUT/layout.html'%}
+{% load static %}
+
+
+{% block link %}
+<link href="{% static 'CSS/home.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+<section>
+    <h2>ORGANIZADOR SEMANAL</h2>
+    <nav>
+        <a href="{% url 'Calendario:calendariovista'%}">CALENDARIO COMPLETO</a>
+        <a href="{% url 'Calendario:calendarioanalisis' %}">HORARIOS ANÁLISIS</a>
+        <a href="{% url 'Calendario:calendarioalgebra' %}">HORARIOS ÁLGEBRA</a>
+        <a href="{% url 'Calendario:calendariotaller' %}">HORARIOS TALLER</a>
+    </nav>
+</section>
+{% endblock %}

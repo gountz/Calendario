@@ -1,0 +1,49 @@
+{% extends 'LAYOUT/layout.html' %}
+{% load static %}
+
+{% block link %}
+<link href="{% static 'CSS/materias.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+
+{% block content %}
+<section>
+    <h2><a href="{% url 'Calendario:home' %}">TALLER ÁLGEBRA</a></h2>
+    <article>
+        <h3>CURSADA</h3>
+        <ul>
+            <li><h3>MIÉRCOLES</h3></li>
+            {% for hour in MIERCOLES %}
+                <li>{{hour.hour}}</li>
+            {% endfor %}
+        </ul>
+    </article>
+    <article>
+        <h3>HORAS DE ESTUDIO</h3>
+        <ul>
+            <li>MIÉRCOLES</li>
+            {% for estudio in TALLER %}
+                {% if estudio.dia == 'MIERCOLES' %}   
+                    <li>{{estudio.hour}}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+        <ul>
+            <li>SÁBADO</li>
+            {% for estudio in TALLER %}
+                {% if estudio.dia == 'SABADO' %}   
+                    <li>{{estudio.hour}}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+        <ul>
+            <li>DOMINGO</li>
+            {% for estudio in TALLER %}
+                {% if estudio.dia == 'DOMINGO' %}   
+                    <li>{{estudio.hour}}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </article>
+</section>
+{% endblock %}

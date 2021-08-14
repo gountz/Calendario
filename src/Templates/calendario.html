@@ -1,0 +1,83 @@
+{% extends 'LAYOUT/layout.html' %}
+{% load static %}
+{% block link %}
+    <link href="{% static 'CSS/calendario.css'%}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+<section>
+    <article class="tabla">
+            <ul>
+                <li class="tabla-days"><h2><a href="{% url 'Calendario:home' %}">LUNES</a></h2></li>
+                {% for hour in LUNES %}
+                    <li>
+                        <h5>{{hour.hour}}</h5>
+                        <p class="tabla-description">{{hour.description}}</p>
+                        <a href="{% url 'Calendario:edit-hour' hour.id%}">EDITAR</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            
+            <ul>
+                <li class="tabla-days"><h2><a href="{% url 'Calendario:home' %}">MARTES</a></h2></li>
+                {% for hour in MARTES %}
+                    <li>
+                        <h5>{{hour.hour}}</h5>
+                        <p class="tabla-description">{{hour.description}}</p>
+                        <a href="{% url 'Calendario:edit-hour' hour.id%}">EDITAR</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <ul>
+                <li class="tabla-days"><h2><a href="{% url 'Calendario:home' %}">MIÉRCOLES</a></h2></li>
+                {% for hour in MIERCOLES %}
+                    <li>
+                        <h5>{{hour.hour}}</h5>
+                        <p class="tabla-description">{{hour.description}}</p>
+                        <a href="{% url 'Calendario:edit-hour' hour.id%}">EDITAR</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <ul>
+                <li class="tabla-days"><h2><a href="{% url 'Calendario:home' %}">JUEVES</a></h2></li>
+                {% for hour in JUEVES %}
+                    <li>
+                        <h5>{{hour.hour}}</h5>
+                        <p class="tabla-description">{{hour.description}}</p>
+                        <a href="{% url 'Calendario:edit-hour' hour.id%}">EDITAR</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <ul>
+                <li class="tabla-days"><h2><a href="{% url 'Calendario:home' %}">VIERNES</a></h2></li>
+                {% for hour in VIERNES %}
+                    <li>
+                        <h5>{{hour.hour}}</h5>
+                        <p class="tabla-description">{{hour.description}}</p>
+                        <a href="{% url 'Calendario:edit-hour' hour.id%}">EDITAR</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <ul>
+                <li class="tabla-days"><h2><a href="{% url 'Calendario:home' %}">SÁBADO</a></h2></li>
+                {% for hour in SABADO %}
+                    <li>
+                        <h5>{{hour.hour}}</h5>
+                        <p class="tabla-description">{{hour.description}}</p>
+                        <a href="{% url 'Calendario:edit-hour' hour.id%}">EDITAR</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <ul>
+                <li class="tabla-days"><h2><a href="{% url 'Calendario:home' %}">DOMINGO</a></h2></li>
+                {% for hour in DOMINGO %}
+                    <li>
+                        <h5>{{hour.hour}}</h5>
+                        <p class="tabla-description">{{hour.description}}</p>
+                        <a href="{% url 'Calendario:edit-hour' hour.id%}">EDITAR</a>
+                    </li>
+                {% endfor %}
+            </ul>
+    </article>
+</section>
+{% endblock %}

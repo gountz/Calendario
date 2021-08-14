@@ -1,0 +1,17 @@
+{% extends 'LAYOUT/layout.html' %}
+{% load static %}
+
+{% block link %}
+    <link href="{% static 'CSS/edit_hour.css'%}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+<section>
+    <h2>{{object.hour}}</h2>
+    <form method="POST">{% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="EDITAR">
+    </form>
+</section>
+
+{% endblock %}
