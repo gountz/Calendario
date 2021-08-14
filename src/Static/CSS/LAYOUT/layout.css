@@ -1,0 +1,25 @@
+*{
+    margin:0;
+    border:0;
+    box-sizing:border-box;
+    color:#000;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+:root{
+    --fondo-color:#B9F5D8;
+    --fondo-horarios:#49BEAA;
+    --color-btn-hover:#FFFD98;
+    --color-btn:#FFD447;
+    --color-tabla-days:#23395B;
+    --color-description:#183A37;
+
+}
+
+body{
+    width:auto;
+    height:auto;
+}
+main{
+    width:auto;
+    height:auto;
+}
